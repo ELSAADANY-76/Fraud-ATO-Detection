@@ -48,6 +48,7 @@ The model achieved approximately 89.19% fraud recall, demonstrating that it dete
 
 However, precision was approximately 6.62%, indicating that many legitimate transactions were incorrectly flagged as fraudulent.
 
+
 ## 7. Conclusion
 
 The baseline model provides an initial machine learning solution for identifying fraudulent financial transactions.
