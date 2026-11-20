@@ -1,6 +1,6 @@
-# Phase 1 – Baseline Model Results
+# Phase 1 – Final Baseline Results
 
-## 1. Model Information
+## 1. Model Configuration
 
 - Algorithm: Logistic Regression
 - Class Weight: Balanced
@@ -9,22 +9,23 @@
 
 ## 2. Dataset Information
 
-The original dataset contained 284,807 transactions.
+- Original records: 284,807
+- Duplicate records removed: 1,081
+- Cleaned records: 283,726
+- Missing values: 0
 
-After removing 1,081 exact duplicate records, the cleaned dataset contained 283,726 transactions.
+## 3. Train/Test Split
 
-## 3. Dataset Split
-
-| Description | Number |
+| Description | Records |
 |---|---:|
-| Training transactions | 226,980 |
-| Testing transactions | 56,746 |
+| Training | 226,980 |
+| Testing | 56,746 |
 | Training fraud cases | 399 |
 | Testing fraud cases | 74 |
 
-A chronological 80/20 split was used.
+A chronological 80/20 split was applied.
 
-## 4. Evaluation Results
+## 4. Evaluation Metrics
 
 | Metric | Result |
 |---|---:|
@@ -40,17 +41,16 @@ A chronological 80/20 split was used.
 | Legitimate | 55,741 | 931 |
 | Fraud | 8 | 66 |
 
-## 6. Results Interpretation
+## 6. Interpretation
 
-The Logistic Regression model detected 66 out of 74 fraudulent transactions.
+The model detected 66 out of 74 fraudulent transactions.
 
-The model achieved approximately 89.19% fraud recall, demonstrating that it detected most fraudulent transactions.
+It achieved approximately 89.19% recall, demonstrating its ability to identify most fraudulent transactions.
 
-However, precision was approximately 6.62%, indicating that many legitimate transactions were incorrectly flagged as fraudulent.
-
+However, precision was approximately 6.62%, indicating a high number of false-positive predictions.
 
 ## 7. Conclusion
 
-The baseline model provides an initial machine learning solution for identifying fraudulent financial transactions.
+The Logistic Regression model provides our initial fraud detection baseline.
 
-Further improvements will focus on reducing false positives while maintaining strong fraud detection performance.
+Future improvements will focus on reducing false positives while maintaining high fraud detection performance.
