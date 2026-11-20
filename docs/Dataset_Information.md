@@ -43,6 +43,18 @@ The dataset contains credit card transactions made by European cardholders durin
 - Original transaction characteristics are anonymized.
 - Does not contain login history or device information required for direct account-takeover detection.
 
-## License
+## License and Usage
 
-Refer to the dataset's current Kaggle licensing and usage terms before redistribution or publication.
+**Dataset:** ULB Credit Card Fraud Detection
+
+**Source:** Kaggle – ULB Machine Learning Group
+
+**Dataset URL:** https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
+
+**License:** Database Contents License (DbCL) v1.0.
+
+**License Reference:** https://opendatacommons.org/licenses/dbcl/1.0/
+
+The dataset is used for academic and educational purposes.
+
+The original dataset is not included in this GitHub repository due to its large file size. Users should obtain the dataset from its original source and follow the applicable licensing conditions.
