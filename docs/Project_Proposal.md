@@ -66,13 +66,18 @@ The initial model will be evaluated using:
 
 Recall and precision will be particularly important because of the highly imbalanced nature of financial fraud datasets.
 
+Success targets (on the time-based test set):
+
+- Phase 1 baseline: Average Precision of at least 0.70 (achieved: 0.761).
+- Phase 2 final model: recall of at least 80% with precision of at least 30%, and a positive net saving under our cost assumptions (the baseline is EUR -3,931).
+
 ## 8. Team Members
 
 | Member | Responsibility |
 |---|---|
-| Selim | Project development |
-| Lojain | Project development  |
-| Ammar | Project development  |
+| Selim | Preprocessing pipeline, baseline model, leakage check |
+| Lojain | Repository setup, README, EDA |
+| Ammar | Business cost matrix, business metric, presentation |
 
 ## 9. Expected Outcome
 
