@@ -13,6 +13,7 @@
 - Duplicate records removed: 1,081
 - Cleaned records: 283,726
 - Missing values: 0
+Figures: `confusion_matrix.png` and `precision_recall_curve.png` show the run before duplicate removal; the `_cleaned` versions show the final run after removing 1,081 duplicates.
 
 ## 3. Train/Test Split
 
