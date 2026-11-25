@@ -66,8 +66,6 @@ Benefits:
 
 The financial cost of a false negative may be significantly higher than the cost of a false positive, depending on the transaction amount and business circumstances.
 
-Actual financial costs are not available in our dataset, so we will not assign invented monetary values.
-
 ## 5. Business Priorities
 
 Our system should:
@@ -87,20 +85,32 @@ We will use the following metrics:
 - Confusion Matrix: Shows the four classification outcomes.
 - Average Precision: Summarizes performance across different precision-recall thresholds.
 
-## 7. Baseline Model Results
+## 7. Baseline Model Results and Business Metric
 
-Our initial Logistic Regression model achieved:
+Logistic Regression baseline (cleaned dataset, threshold 0.5):
 
 | Metric | Result |
 |---|---:|
-| Precision | 7.07% |
-| Recall | 89.33% |
-| F1-score | 13.11% |
-| Average Precision | 76.11% |
+| Precision | 6.62% |
+| Recall | 89.19% |
+| F1-score | 12.32% |
+| Average Precision | 76.08% |
 
-The model detected 67 out of 75 fraudulent transactions but incorrectly flagged 880 legitimate transactions.
+The model detected 66 of 74 fraudulent transactions and flagged 931 legitimate transactions.
 
-This demonstrates the challenge of balancing fraud detection and customer experience.
+### Business metric (assumptions)
+
+- A missed fraud costs its transaction amount (Amount column, EUR).
+- A false decline costs an assumed EUR 10 (manual review and customer friction).
+
+| Item | Value |
+|---|---:|
+| Fraud loss avoided (caught fraud) | EUR 5,378.78 |
+| Fraud loss missed | EUR 2,348.89 |
+| False declines | 931 x EUR 10 = EUR 9,310 |
+| Net saving vs no model | EUR -3,931.22 |
+
+At the default 0.5 threshold, the cost of false declines exceeds the fraud loss avoided. The model catches 89% of fraud cases but only 70% of fraud value. This motivates the cost-optimal threshold selection planned for Phase 2.
 
 ## 8. Future Improvements
 
