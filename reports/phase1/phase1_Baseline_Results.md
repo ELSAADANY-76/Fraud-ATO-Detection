@@ -54,3 +54,7 @@ However, precision was approximately 6.62%, indicating a high number of false-po
 The Logistic Regression model provides our initial fraud detection baseline.
 
 Future improvements will focus on reducing false positives while maintaining high fraud detection performance.
+
+## 8. Limitations
+
+- The raw Time feature (seconds since the first transaction) was included as a model input. In Phase 2 we will remove it or replace it with hour of day, since its test values fall outside the training range.
