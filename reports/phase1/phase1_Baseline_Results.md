@@ -54,3 +54,18 @@ However, precision was approximately 6.62%, indicating a high number of false-po
 The Logistic Regression model provides our initial fraud detection baseline.
 
 Future improvements will focus on reducing false positives while maintaining high fraud detection performance.
+
+## 8. Limitations
+
+- The raw Time feature (seconds since the first transaction) was included as a model input. In Phase 2 we will remove it or replace it with hour of day, since its test values fall outside the training range.
+
+## 9. Leakage Check
+
+All checks are run in notebook 02 and pass:
+
+1. Chronological split: training ends (Time 145,247) before testing starts.
+2. The StandardScaler is inside the Pipeline and its mean equals the training-set mean, so it was fitted on training data only.
+3. No identical rows appear in both the training and test sets (duplicates were removed before the split).
+4. The target (Class) is not used as a feature.
+
+Inherited limitation: V1–V28 were produced by the dataset authors using PCA on the full dataset, before our split. We cannot remove this, so we state it for transparency.
