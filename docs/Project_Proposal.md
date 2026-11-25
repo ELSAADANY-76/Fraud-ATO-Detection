@@ -8,9 +8,7 @@ Our project aims to develop a machine learning-based fraud detection system that
 
 ## 2. Target Customer
 
-- Digital payment providers.
-- Fintech startups.
-- E-commerce platforms.
+Primary customer: a mid-sized online payment provider that processes card payments for e-commerce merchants. Its fraud team must stop fraudulent payments in real time without declining honest customers, because every false decline loses a sale and every missed fraud is a direct chargeback loss.
 
 ## 3. Proposed Solution
 
